@@ -62,7 +62,7 @@ Wikilinks to [Another Post](../my-another-post) will be transformed into Markdow
 
 Image links such as
 
-![](obsidian-2-jekyll-demo/assets/images/random-image-abc.gif){: width="500" }
+![](/obsidian-2-jekyll-demo/assets/images/random-image-abc.gif){: width="500" }
 
 will be rendered to be compatible with Jekyll, along with the specified `width` (if provided).
 

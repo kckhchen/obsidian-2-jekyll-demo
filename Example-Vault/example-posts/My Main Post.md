@@ -87,29 +87,23 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 > [!INFO]
 > If a callout does not have a title, the callout type will be the title.
 
-
 > [!Warning] Callout Title (Warning callout)
 > Optionally, a callout can have a title.
 
-
 > [!quote] A Quote Callout
-
 
 > [!Error] An Error Callout
 > Just like the callout above, a callout can have no messages.
 
-
 > [!hint] A Hint Callout
 > Just another callout
-
 
 > [!example]- A Foldable Example Callout
 > Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
 
-
 > [!success]+ A Foldable Success Callout But Default Open
 > Callout type followed by a + will make the callout open by default.
 
-
 > [!random] A not yet support callout
 > A non-standard callout type or a callout type not yet supported will be in this default style.
+
