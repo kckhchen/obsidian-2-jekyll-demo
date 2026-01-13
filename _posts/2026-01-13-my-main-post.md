@@ -58,7 +58,7 @@ If you have dollar signs \$ (e.g. The apple costs 10\$ and the banana costs 5\$)
 
 ### Image Links and Wikilinks
 
-Wikilinks to [Another Post](../my-another-post) will be transformed into Markdown link, with the link replaced to a url (`../another-post`). 
+Wikilinks to [Another Post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}) will be transformed into Markdown link, with the link replaced to a url (`../another-post`). 
 
 Image links such as
 
@@ -81,9 +81,9 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 [Block link to a math block with a math environment in this post](#secid2d1a9f)
 ### Links to Other Posts
 
-[Block link to a paragraph in another post](../my-another-post#secidf07645)
+[Block link to a paragraph in another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#secidf07645)
 
-[This points to a section in another post.](../my-another-post#amazing-h2-title)
+[This points to a section in another post.]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#amazing-h2-title)
 
 ## Callouts
 
@@ -92,30 +92,25 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 If a callout does not have a title, the callout type will be the title.
 
 </div>
-
 <div class="callout callout-warning" markdown="1">
 <div class="callout-title">Callout Title (Warning callout)</div>
 Optionally, a callout can have a title.
 
 </div>
-
 <div class="callout callout-quote" markdown="1">
 <div class="callout-title">A Quote Callout</div>
 
 </div>
-
 <div class="callout callout-error" markdown="1">
 <div class="callout-title">An Error Callout</div>
 Just like the callout above, a callout can have no messages.
 
 </div>
-
 <div class="callout callout-hint" markdown="1">
 <div class="callout-title">A Hint Callout</div>
 Just another callout
 
 </div>
-
 <div class="callout callout-example" markdown="1">
 <details>
     <summary class="callout-title">A Foldable Example Callout</summary>
@@ -123,7 +118,6 @@ Just another callout
 
 </details>
 </div>
-
 <div class="callout callout-success" markdown="1">
 <details open>
     <summary class="callout-title">A Foldable Success Callout But Default Open</summary>
@@ -131,7 +125,6 @@ Just another callout
 
 </details>
 </div>
-
 <div class="callout callout-random" markdown="1">
 <div class="callout-title">A not yet support callout</div>
 A non-standard callout type or a callout type not yet supported will be in this default style.
