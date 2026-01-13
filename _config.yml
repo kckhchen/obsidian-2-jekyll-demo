@@ -1,12 +1,10 @@
 title: Obsidian2Jekyll Demo
 email: kckhchen@gmail.com
-description: >-
-  A site to demonstrate the blog posts processed by the tool Obsidian2Jekyll.
-baseurl: '/obsidian-2-jekyll-demo' # the subpath of your site, e.g. /blog
-url: 'kckhchen.com' # the base hostname & protocol for your site, e.g. http://example.com
+description: A site to demonstrate the blog posts processed by the tool Obsidian2Jekyll.
+baseurl: '/obsidian-2-jekyll-demo'
+url: 'kckhchen.com'
 permalink: /:title/
 github_username: kckhchen
 
-# Build settings
 markdown: kramdown
 theme: minima

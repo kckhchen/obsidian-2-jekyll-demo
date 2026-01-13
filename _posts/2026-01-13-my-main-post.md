@@ -62,7 +62,7 @@ Wikilinks to [Another Post](../my-another-post) will be transformed into Markdow
 
 Image links such as
 
-![](/obsidian-2-jekyll-demo/assets/images/random-image-abc.gif){: width="500" }
+![](obsidian-2-jekyll-demo/assets/images/random-image-abc.gif){: width="500" }
 
 will be rendered to be compatible with Jekyll, along with the specified `width` (if provided).
 
@@ -118,7 +118,7 @@ Just another callout
 
 <div class="callout callout-example" markdown="1">
 <details>
-    <summary class="callout-title">A Foldable Callout</summary>
+    <summary class="callout-title">A Foldable Example Callout</summary>
     Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
 
 </details>
@@ -126,17 +126,12 @@ Just another callout
 
 <div class="callout callout-success" markdown="1">
 <details open>
-    <summary class="callout-title">A foldable callout but default open</summary>
+    <summary class="callout-title">A Foldable Success Callout But Default Open</summary>
     Callout type followed by a + will make the callout open by default.
 
 </details>
 </div>
 
-<div class="callout callout-random" markdown="1">
-<div class="callout-title">A not yet support callout</div>
-A non-standard callout type or a callout type not yet supported will be in this default style.
-
-</div>
 <div class="callout callout-random" markdown="1">
 <div class="callout-title">A not yet support callout</div>
 A non-standard callout type or a callout type not yet supported will be in this default style.

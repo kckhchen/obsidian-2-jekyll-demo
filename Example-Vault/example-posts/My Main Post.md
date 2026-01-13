@@ -103,16 +103,13 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 > Just another callout
 
 
-> [!example]- A Foldable Callout
+> [!example]- A Foldable Example Callout
 > Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
 
 
-> [!success]+ A foldable callout but default open
+> [!success]+ A Foldable Success Callout But Default Open
 > Callout type followed by a + will make the callout open by default.
 
-
-> [!random] A not yet support callout
-> A non-standard callout type or a callout type not yet supported will be in this default style.
 
 > [!random] A not yet support callout
 > A non-standard callout type or a callout type not yet supported will be in this default style.
