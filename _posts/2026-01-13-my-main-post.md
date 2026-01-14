@@ -5,7 +5,7 @@ title: Main Title
 
 This is a demo website for my tool [Obsidian-2-Jekyll](https://github.com/kckhchen/obsidian-2-jekyll).
 
-The file name will be `2026-01-12-my-main-post.md`, since the original file name is `My Main Post` and the creation date is 12th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed to prevent duplicate titles.
+The file name will be `2026-01-13-my-main-post.md`, since the original file name is `My Main Post` and the creation date is 13th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed to prevent duplicate titles.
 
 If you want to see the original Obsidian article, you can find them in the `Example-Vault` folder at the [repo for this demo site](https://github.com/kckhchen/obsidian-2-jekyll-demo).
 
@@ -69,48 +69,59 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 ## Callouts
 
 <div class="callout callout-info" markdown="1">
-<div class="callout-title">Info</div>
+<div class="callout-title"><i class="callout-icon" data-lucide="info"></i>Info</div>
 If a callout does not have a title, the callout type will be the title.
 
 </div>
 <div class="callout callout-warning" markdown="1">
-<div class="callout-title">A Warning Callout with Title</div>
+<div class="callout-title"><i class="callout-icon" data-lucide="circle-alert"></i>A Warning Callout with Title</div>
 Optionally, a callout can have a title.
 
 </div>
 <div class="callout callout-quote" markdown="1">
-<div class="callout-title">A Quote Callout</div>
+<div class="callout-title"><i class="callout-icon" data-lucide="quote"></i>A Quote Callout</div>
 
 </div>
 <div class="callout callout-error" markdown="1">
-<div class="callout-title">An Error Callout</div>
+<div class="callout-title"><i class="callout-icon" data-lucide="zap"></i>An Error Callout</div>
 Just like the callout above, a callout can have no messages.
 
 </div>
 <div class="callout callout-hint" markdown="1">
-<div class="callout-title">A Hint Callout</div>
+<div class="callout-title"><i class="callout-icon" data-lucide="flame"></i>A Hint Callout</div>
 Just to show you it supports every callout.
 
 </div>
 <div class="callout callout-example" markdown="1">
 <details>
-    <summary class="callout-title">A Foldable Example Callout</summary>
+    <summary class="callout-title"><i class="callout-icon" data-lucide="list"></i>A Foldable Example Callout</summary>
     Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
 
 </details>
 </div>
 <div class="callout callout-success" markdown="1">
 <details open>
-    <summary class="callout-title">A Foldable Success Callout But Default Open</summary>
+    <summary class="callout-title"><i class="callout-icon" data-lucide="check"></i>A Foldable Success Callout But Default Open</summary>
     Callout type followed by a + will make the callout open by default.
 
 </details>
 </div>
 <div class="callout callout-random" markdown="1">
-<div class="callout-title">A not yet support callout</div>
+<div class="callout-title"><i class="callout-icon" data-lucide="book-check"></i>A not yet support callout</div>
 A non-standard callout type or a callout type not yet supported will be in this default style.
 </div>
 
 {% include obsidian-callouts.html %}
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons({
+    attrs: {
+        'stroke-width': 2.5,
+        stroke: 'currentColor',
+    },
+    });
+</script>
+
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>

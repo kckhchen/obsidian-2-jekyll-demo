@@ -45,7 +45,6 @@ An non-functional artificial URL, just to show you could have two \$'s in an URL
 [A Google Search URL](https://www.google.com/search?q=a-fake-url$with-two$dollar-signs)
 {: #secidd34e3b}
 
-
 ## Math Shielding
 
 
