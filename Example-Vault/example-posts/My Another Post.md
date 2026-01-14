@@ -1,22 +1,22 @@
 # This is another post
 
-## Amazing h2 Title
-
-This post only has a paragraph to be linked to. ^f07645
-
 ## Some Examples on Shielding
 
 ### Code Block Shielding
 ```
-Some random url inside code block:
-https://stackoverflow.com/questions/4697882/how-can-i-find-all-matches-to-a-regular-expression-in-python
+URLs inside a code block:
+https://stackoverflow.com/
 
-Some random math block inside code block:
+Wikilinks inside a code block:
+A [[Wikilink inside a code block]] will not be processed.
+An ![[image-link-inside-code-block.img]] will not be processed.
+
+Some random math block inside a code block:
 $$
 a^2 + b^2 = c^2
 $$
 
-Callouts inside code block:
+Callouts inside a code block:
 
 > [!note] A Callout
 > Some text
@@ -31,12 +31,15 @@ Here is how you write a code block in Markdown:
 def hello():
     print("Hello World")
 ```
+
+[[Wikilink]]
+$math$
 ````
 
 ## URL Shielding
 
-An non-functional artificial URL, just to show you could have two \$'s in an URL and it will not be mistaken as math blocks.
-[Some URL](https://www.google.com/search?q=a-fake-url$with-two$dollar-signs) ^d34e3b
+An non-functional artificial URL, just to show you could have two \$'s in an URL and it will not be mistaken for math blocks:
+[A Google Search URL](https://www.google.com/search?q=a-fake-url$with-two$dollar-signs) ^d34e3b
 
 
 ## Math Shielding
@@ -60,3 +63,5 @@ $$
 ### Math Inside Displayed Text of a MD Link
 
 [Read about $\pi$ and $e^x$ here](https://en.wikipedia.org/wiki/Pi)
+
+Go back to [[My Main Post]].

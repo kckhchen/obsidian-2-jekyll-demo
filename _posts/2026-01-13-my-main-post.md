@@ -5,11 +5,13 @@ title: Main Title
 
 This is a demo website for my tool [Obsidian-2-Jekyll](https://github.com/kckhchen/obsidian-2-jekyll).
 
-The file name will be `2026-01-12-my-main-post`, since the original file name is `My Main Post` and the creation date is 12th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed.
+The file name will be `2026-01-12-my-main-post.md`, since the original file name is `My Main Post` and the creation date is 12th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed to prevent duplicate titles.
+
+If you want to see the original Obsidian article, you can find them in the `Example-Vault` folder at the [repo for this demo site](https://github.com/kckhchen/obsidian-2-jekyll-demo).
 
 ## Math Processing
 
-Any math section like a simple \\(a^2 + b^{2} = c^{2}\\) will be rendered correctly, including math blocks:
+Any inline math like \\(a^2 + b^{2} = c^{2}\\) will be rendered correctly, as well as math blocks:
 {: #secid10d1e3}
 
 
@@ -18,7 +20,7 @@ $$
 $$
 {: #secid0f5bab}
 
-This also works with multi-line and math block with environments:
+This also works with multi-line math block with `\begin{...}` environments:
 
 
 $$
@@ -33,38 +35,18 @@ $$
 $$
 {: #secid2d1a9f}
 
-### A Note on Code Shields
-
-Inline code with \$'s, such as `$a fake math block$` and code blocks with \$ will remain intact:
-
-```
-$ echo "This block"
-$ echo "will be safe from math detector."
-
-$$
-A math block inside a code block.
-$$
-```
-{: #secid2863db}
-
-Wikilinks also won't be affected when inside code blocks.
-```
-A [[Wikilink inside a code block]] will not be processed.
-An ![[image-link-inside-code-block.img]] will not be processed.
-```
-
 
 If you have dollar signs \$ (e.g. The apple costs 10\$ and the banana costs 5\$), please escape them with \\ so that they won't get mistaken as math environments.
 
 ### Image Links and Wikilinks
 
-Wikilinks to [Another Post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}) will be transformed into Markdown link, with the link replaced to a url (`../another-post`). 
+A Wikilink to [Another Post, where you can see how shielding works]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}) will be transformed into a Markdown link, with the link replaced by a Liquid tag `{% raw %}{% link _posts/path/to/post %}{% endraw %}`, which will be taken care of by Jekyll. 
 
-Image links such as
+Embedded images such as
 
 ![]({{ site.baseurl }}{% link assets/images/random-image-abc.gif %}){: width="500" }
 
-will be rendered to be compatible with Jekyll, along with the specified `width` (if provided).
+will be rendered to be compatible with Jekyll (also via Liquid tags), along with the specified `width` (if provided). The actual image file will be copied to Jekyll's `assets/images` folder (or a folder of your choice).
 
 The `.md` files found in the `_posts` folder might look broken and won't be rendered by most Markdown editors correctly, but they are compatible with Jekyll's requirements.
 
@@ -74,16 +56,14 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 
 [Block link to a paragraph in this post](#secid10d1e3)
 
-[Block link to a code block in this post](#secid2863db)
-
 [Block link to a math block in this post](#secid0f5bab)
 
 [Block link to a math block with a math environment in this post](#secid2d1a9f)
 ### Links to Other Posts
 
-[Link to another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %})
+[Link to another post on shielding]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %})
 
-[Link to the h2 section of that post.]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#amazing-h2-title)
+[Link to a h3 section of that post.]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#code-block-shielding)
 
 [Block link to a paragraph in another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#secidd34e3b)
 
@@ -95,7 +75,7 @@ If a callout does not have a title, the callout type will be the title.
 
 </div>
 <div class="callout callout-warning" markdown="1">
-<div class="callout-title">Callout Title (Warning callout)</div>
+<div class="callout-title">A Warning Callout with Title</div>
 Optionally, a callout can have a title.
 
 </div>
@@ -110,7 +90,7 @@ Just like the callout above, a callout can have no messages.
 </div>
 <div class="callout callout-hint" markdown="1">
 <div class="callout-title">A Hint Callout</div>
-Just another callout
+Just to show you it supports every callout.
 
 </div>
 <div class="callout callout-example" markdown="1">
