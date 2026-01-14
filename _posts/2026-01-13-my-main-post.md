@@ -5,7 +5,7 @@ title: Main Title
 
 This is a demo website for my tool [Obsidian-2-Jekyll](https://github.com/kckhchen/obsidian-2-jekyll).
 
-The file name will be `2026-01-12-my-main-post`, since the original file name is `My Main Post` and the creation date is 12th January, 2026. The `h1` title "This Should Be the Main Title" will be treated as post title on the website, and the header will be removed.
+The file name will be `2026-01-12-my-main-post`, since the original file name is `My Main Post` and the creation date is 12th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed.
 
 ## Math Processing
 
