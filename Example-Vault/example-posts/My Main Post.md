@@ -78,9 +78,11 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 [[#^2d1a9f|Block link to a math block with a math environment in this post]]
 ### Links to Other Posts
 
-[[My Another Post#^f07645|Block link to a paragraph in another post]]
+[[My Another Post|Link to another post]]
 
-[[My Another Post#Amazing h2 Title|This points to a section in another post.]]
+[[My Another Post#Amazing h2 Title|Link to the h2 section of that post.]]
+
+[[My Another Post#^d34e3b|Block link to a paragraph in another post]]
 
 ## Callouts
 

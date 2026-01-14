@@ -41,6 +41,7 @@ def hello():
 
 An non-functional artificial URL, just to show you could have two \$'s in an URL and it will not be mistaken as math blocks.
 [Some URL](https://www.google.com/search?q=a-fake-url$with-two$dollar-signs)
+{: #secidd34e3b}
 
 
 ## Math Shielding

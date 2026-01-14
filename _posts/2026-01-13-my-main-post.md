@@ -81,9 +81,11 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 [Block link to a math block with a math environment in this post](#secid2d1a9f)
 ### Links to Other Posts
 
-[Block link to a paragraph in another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#secidf07645)
+[Link to another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %})
 
-[This points to a section in another post.]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#amazing-h2-title)
+[Link to the h2 section of that post.]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#amazing-h2-title)
+
+[Block link to a paragraph in another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#secidd34e3b)
 
 ## Callouts
 
