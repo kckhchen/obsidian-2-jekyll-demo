@@ -62,7 +62,7 @@ Wikilinks to [Another Post]({{ site.baseurl }}{% link _posts/2026-01-13-my-anoth
 
 Image links such as
 
-![](/obsidian-2-jekyll-demo/assets/images/random-image-abc.gif){: width="500" }
+![]({{ site.baseurl }}{% link assets/images/random-image-abc.gif %}){: width="500" }
 
 will be rendered to be compatible with Jekyll, along with the specified `width` (if provided).
 
