@@ -58,7 +58,6 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 
 [Block link to a math block in this post](#secid0f5bab)
 
-[Block link to a math block with a math environment in this post](#secid2d1a9f)
 ### Links to Other Posts
 
 [Link to another post on shielding]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %})

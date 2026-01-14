@@ -54,7 +54,6 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 
 [[#^0f5bab|Block link to a math block in this post]]
 
-[[#^2d1a9f|Block link to a math block with a math environment in this post]]
 ### Links to Other Posts
 
 [[My Another Post|Link to another post on shielding]]
