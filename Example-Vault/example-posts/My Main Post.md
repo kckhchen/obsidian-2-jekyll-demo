@@ -84,6 +84,5 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 > [!success]+ A Foldable Success Callout But Default Open
 > Callout type followed by a + will make the callout open by default.
 
-> [!random] A not yet support callout
-> A non-standard callout type or a callout type not yet supported will be in this default style.
-
+> [!random] A Random Callout Type
+> A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `process_callouts.py` (I planned to move it to `templates.py` for better accessibility).

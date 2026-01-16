@@ -93,35 +93,22 @@ Just to show you it supports every callout.
 
 </div>
 <div class="callout callout-example" markdown="1">
-<details>
-    <summary class="callout-title"><i class="callout-icon" data-lucide="list"></i>A Foldable Example Callout</summary>
-    Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
-
+<details markdown="1">
+<summary class="callout-title"><i class="callout-icon" data-lucide="list"></i>A Foldable Example Callout</summary>
+Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
 </details>
 </div>
 <div class="callout callout-success" markdown="1">
-<details open>
-    <summary class="callout-title"><i class="callout-icon" data-lucide="check"></i>A Foldable Success Callout But Default Open</summary>
-    Callout type followed by a + will make the callout open by default.
-
+<details open markdown="1">
+<summary class="callout-title"><i class="callout-icon" data-lucide="check"></i>A Foldable Success Callout But Default Open</summary>
+Callout type followed by a + will make the callout open by default.
 </details>
 </div>
 <div class="callout callout-random" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="book-check"></i>A not yet support callout</div>
-A non-standard callout type or a callout type not yet supported will be in this default style.
+<div class="callout-title"><i class="callout-icon" data-lucide="book-check"></i>A Random Callout Type</div>
+A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `process_callouts.py` (I planned to move it to `templates.py` for better accessibility).
 </div>
 
 {% include obsidian-callouts.html %}
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-    lucide.createIcons({
-    attrs: {
-        'stroke-width': 2.5,
-        stroke: 'currentColor',
-    },
-    });
-</script>
-
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
