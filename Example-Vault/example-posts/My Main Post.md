@@ -1,3 +1,7 @@
+---
+share: true
+---
+
 # Main Title
 
 This is a demo website for my tool [Obsidian-2-Jekyll](https://github.com/kckhchen/obsidian-2-jekyll).
@@ -61,6 +65,10 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 [[My Another Post#Code Block Shielding|Link to a h3 section of that post.]]
 
 [[My Another Post#^d34e3b|Block link to a paragraph in another post]]
+
+### Invalid links
+
+[[A Fake Posts|A link to a post]] that doesn't exist or isn't published will be transformed to plain text. If you look at the original md file, there was a link attached to "A link to a post".
 
 ## Callouts
 

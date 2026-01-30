@@ -1,5 +1,6 @@
 ---
 layout: post
+share: true
 title: Main Title
 ---
 
@@ -66,48 +67,36 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 
 [Block link to a paragraph in another post]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}#secidd34e3b)
 
+### Invalid links
+
+A link to a post that doesn't exist or isn't published will be transformed to plain text. If you look at the original md file, there was a link attached to "A link to a post".
+
 ## Callouts
 
-<div class="callout callout-info" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="info"></i>Info</div>
+<div class="callout callout-info" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="info"></i><span class="callout-title-text">Info</span></div>
 If a callout does not have a title, the callout type will be the title.
-
 </div>
-<div class="callout callout-warning" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="circle-alert"></i>A Warning Callout with Title</div>
+<div class="callout callout-warning" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="circle-alert"></i><span class="callout-title-text">A Warning Callout with Title</span></div>
 Optionally, a callout can have a title.
-
 </div>
-<div class="callout callout-quote" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="quote"></i>A Quote Callout</div>
-
+<div class="callout callout-quote" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="quote"></i><span class="callout-title-text">A Quote Callout</span></div>
 </div>
-<div class="callout callout-error" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="zap"></i>An Error Callout</div>
+<div class="callout callout-error" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="zap"></i><span class="callout-title-text">An Error Callout</span></div>
 Just like the callout above, a callout can have no messages.
-
 </div>
-<div class="callout callout-hint" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="flame"></i>A Hint Callout</div>
+<div class="callout callout-hint" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="flame"></i><span class="callout-title-text">A Hint Callout</span></div>
 Just to show you it supports every callout.
-
 </div>
-<div class="callout callout-example" markdown="1">
-<details markdown="1">
-<summary class="callout-title"><i class="callout-icon" data-lucide="list"></i>A Foldable Example Callout</summary>
+<div class="callout callout-example" markdown="1"><details markdown="1">
+<summary class="callout-title"><i class="callout-icon" data-lucide="list"></i><span class="callout-title-text">A Foldable Example Callout</span></summary>
 Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
-</details>
-</div>
-<div class="callout callout-success" markdown="1">
-<details open markdown="1">
-<summary class="callout-title"><i class="callout-icon" data-lucide="check"></i>A Foldable Success Callout But Default Open</summary>
+</details></div>
+<div class="callout callout-success" markdown="1"><details open markdown="1">
+<summary class="callout-title"><i class="callout-icon" data-lucide="check"></i><span class="callout-title-text">A Foldable Success Callout But Default Open</span></summary>
 Callout type followed by a + will make the callout open by default.
-</details>
-</div>
-<div class="callout callout-random" markdown="1">
-<div class="callout-title"><i class="callout-icon" data-lucide="book-check"></i>A Random Callout Type</div>
-A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `process_callouts.py` (I planned to move it to `templates.py` for better accessibility).
-</div>
+</details></div>
+<div class="callout callout-random" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="book-check"></i><span class="callout-title-text">A Random Callout Type</span></div>
+A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `process_callouts.py` (I planned to move it to `templates.py` for better accessibility).</div>
 
 {% include obsidian-callouts.html %}
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+share: true
 title: This is another post
 ---
 

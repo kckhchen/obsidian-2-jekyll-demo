@@ -1,3 +1,7 @@
+---
+share: true
+---
+
 # This is another post
 
 ## Some Examples on Shielding

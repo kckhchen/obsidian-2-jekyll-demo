@@ -1,8 +1,17 @@
 ---
 ---
 
+body {
+  margin: 0;
+}
+
 @import 'minima';
 
 .trigger {
   display: none;
+}
+.MathJax,
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
