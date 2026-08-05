@@ -45,9 +45,9 @@ A Wikilink to [Another Post, where you can see how shielding works]({{ site.base
 
 Embedded images such as
 
-![]({{ site.baseurl }}{% link assets/images/random-image-abc.gif %}){: width="500" }
+![]({{ site.baseurl }}{% link assets/images/obsidian/random-image-abc.gif %}){: width="500" }
 
-will be rendered to be compatible with Jekyll (also via Liquid tags), along with the specified `width` (if provided). The actual image file will be copied to Jekyll's `assets/images` folder (or a folder of your choice).
+will be rendered to be compatible with Jekyll (also via Liquid tags), along with the specified `width` (if provided). The actual image file will be copied to Jekyll's `assets/images/obsidian` folder (or a folder of your choice).
 
 The `.md` files found in the `_posts` folder might look broken and won't be rendered by most Markdown editors correctly, but they are compatible with Jekyll's requirements.
 

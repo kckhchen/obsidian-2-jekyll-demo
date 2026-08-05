@@ -46,7 +46,7 @@ Embedded images such as
 
 ![[random-image-abc.gif|500]]
 
-will be rendered to be compatible with Jekyll (also via Liquid tags), along with the specified `width` (if provided). The actual image file will be copied to Jekyll's `assets/images` folder (or a folder of your choice).
+will be rendered to be compatible with Jekyll (also via Liquid tags), along with the specified `width` (if provided). The actual image file will be copied to Jekyll's `assets/images/obsidian` folder (or a folder of your choice).
 
 The `.md` files found in the `_posts` folder might look broken and won't be rendered by most Markdown editors correctly, but they are compatible with Jekyll's requirements.
 
