@@ -1,8 +1,8 @@
-title: Obsidian2Jekyll Demo
+title: Intaglio Demo
 email: kckhchen@gmail.com
-description: A site to demonstrate the blog posts processed by the tool Obsidian2Jekyll.
-baseurl: '/obsidian-2-jekyll-demo'
-url: 'kckhchen.com'
+description: A site to demonstrate the blog posts processed by the tool Intaglio.
+baseurl: "/intaglio-demo"
+url: "kckhchen.com"
 permalink: /:title/
 github_username: kckhchen
 

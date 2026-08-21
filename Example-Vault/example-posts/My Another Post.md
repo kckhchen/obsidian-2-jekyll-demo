@@ -1,5 +1,6 @@
 ---
 share: true
+date: 2026-01-13
 ---
 
 # This is another post
@@ -7,6 +8,7 @@ share: true
 ## Some Examples on Shielding
 
 ### Code Block Shielding
+
 ```
 URLs inside a code block:
 https://stackoverflow.com/
@@ -52,16 +54,14 @@ $$
 [[1, 2], [3,4]]
 $$
 
-
 ## Other Random Examples
 
 ### Table With Math
 
-| Symbol | Meaning | Equation |
-| :--- | :--- | :--- |
-| $\Vert$ | Norm | $\Vert x \Vert = \sqrt{x^2}$ |
-| $\vert$ | Absolute | $\vert -5 \vert = 5$ |
-
+| Symbol  | Meaning  | Equation                     |
+| :------ | :------- | :--------------------------- |
+| $\Vert$ | Norm     | $\Vert x \Vert = \sqrt{x^2}$ |
+| $\vert$ | Absolute | $\vert -5 \vert = 5$         |
 
 ### Math Inside Displayed Text of a MD Link
 

@@ -1,15 +1,16 @@
 ---
-generator: obsidian-2-jekyll
+date: 2026-01-13
+generator: intaglio
 layout: post
 share: true
 title: Main Title
 ---
 
-This is a demo website for my tool [Obsidian-2-Jekyll](https://github.com/kckhchen/obsidian-2-jekyll).
+This is a demo website for my tool [Intaglio](https://github.com/kckhchen/intaglio).
 
 The file name will be `2026-01-13-my-main-post.md`, since the original file name is `My Main Post` and the creation date is 13th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed to prevent duplicate titles.
 
-If you want to see the original Obsidian article, you can find them in the `Example-Vault` folder at the [repo for this demo site](https://github.com/kckhchen/obsidian-2-jekyll-demo).
+If you want to see the original Obsidian article, you can find them in the `Example-Vault` folder at the [repo for this demo site](https://github.com/kckhchen/intaglio-demo).
 
 ## Math Processing
 
@@ -37,12 +38,11 @@ $$
 $$
 {: #secid2d1a9f}
 
-
 If you have dollar signs \$ (e.g. The apple costs 10\$ and the banana costs 5\$), please escape them with \\ so that they won't get mistaken as math environments.
 
 ### Image Links and Wikilinks
 
-A Wikilink to [Another Post, where you can see how shielding works]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}) will be transformed into a Markdown link, with the link replaced by a Liquid tag `{% raw %}{% link _posts/path/to/post %}{% endraw %}`, which will be taken care of by Jekyll. 
+A Wikilink to [Another Post, where you can see how shielding works]({{ site.baseurl }}{% link _posts/2026-01-13-my-another-post.md %}) will be transformed into a Markdown link, with the link replaced by a Liquid tag `{% raw %}{% link _posts/path/to/post %}{% endraw %}`, which will be taken care of by Jekyll.
 
 Embedded images such as
 
@@ -104,7 +104,7 @@ Callout type followed by a + will make the callout open by default.
 </details>
 </div>
 <div class="callout callout-random" markdown="1"><div class="callout-title"><i class="callout-icon" data-lucide="book-check"></i><span class="callout-title-text">A Random Callout Type</span></div>
-A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `process_callouts.py` (I planned to move it to `templates.py` for better accessibility).
+A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `callout-styles.py`
 </div>
 
 {% include obsidian-callouts.html %}

@@ -1,5 +1,6 @@
 ---
-generator: obsidian-2-jekyll
+date: 2026-01-13
+generator: intaglio
 layout: post
 share: true
 title: This is another post
@@ -8,6 +9,7 @@ title: This is another post
 ## Some Examples on Shielding
 
 ### Code Block Shielding
+
 ```
 URLs inside a code block:
 https://stackoverflow.com/
@@ -56,16 +58,14 @@ $$
 $$
 
 
-
 ## Other Random Examples
 
 ### Table With Math
 
-| Symbol | Meaning | Equation |
-| :--- | :--- | :--- |
-| \\(\Vert\\) | Norm | \\(\Vert x \Vert = \sqrt{x^2}\\) |
-| \\(\vert\\) | Absolute | \\(\vert -5 \vert = 5\\) |
-
+| Symbol  | Meaning  | Equation                     |
+| :------ | :------- | :--------------------------- |
+| \\(\Vert\\) | Norm     | \\(\Vert x \Vert = \sqrt{x^2}\\) |
+| \\(\vert\\) | Absolute | \\(\vert -5 \vert = 5\\)         |
 
 ### Math Inside Displayed Text of a MD Link
 
