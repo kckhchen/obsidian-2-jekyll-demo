@@ -35,12 +35,11 @@ $$
 
 ^2d1a9f
 
-
 If you have dollar signs \$ (e.g. The apple costs 10\$ and the banana costs 5\$), please escape them with \\ so that they won't get mistaken as math environments.
 
 ### Image Links and Wikilinks
 
-A Wikilink to [[My Another Post|Another Post, where you can see how shielding works]] will be transformed into a Markdown link, with the link replaced by a Liquid tag `{% raw %}{% link _posts/path/to/post %}{% endraw %}`, which will be taken care of by Jekyll. 
+A Wikilink to [[My Another Post|Another Post, where you can see how shielding works]] will be transformed into a Markdown link, with the link replaced by a Liquid tag `{% raw %}{% link _posts/path/to/post %}{% endraw %}`, which will be taken care of by Jekyll.
 
 Embedded images such as
 
@@ -93,4 +92,4 @@ The `.md` files found in the `_posts` folder might look broken and won't be rend
 > Callout type followed by a + will make the callout open by default.
 
 > [!random] A Random Callout Type
-> A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `process_callouts.py` (I planned to move it to `templates.py` for better accessibility).
+> A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `callout-styles.py`
