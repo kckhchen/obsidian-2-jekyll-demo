@@ -5,15 +5,23 @@ date: 2026-01-13
 
 # Main Title
 
-This is a demo website for my tool [Intaglio](https://github.com/kckhchen/intaglio).
+This page is the output. It was written as an ordinary Obsidian note and published by [Intaglio](https://github.com/kckhchen/intaglio) with no manual edits.
 
-The file name will be `2026-01-13-my-main-post.md`, since the original file name is `My Main Post` and the creation date is 13th January, 2026. The `h1` header "Main Title" will be treated as post title on the website, and the header will be removed to prevent duplicate titles.
+Every section below is a case where a naive find-and-replace gets it wrong. Each one shows the Obsidian source first, then the result you are looking at. The source is written in `inline code` — which survives untouched, and is itself the first thing being demonstrated.
 
-If you want to see the original Obsidian article, you can find them in the `Example-Vault` folder at the [repo for this demo site](https://github.com/kckhchen/intaglio-demo).
+The original note lives in the `Example-Vault` folder of [this demo's repo](https://github.com/kckhchen/intaglio-demo), if you want to diff it against what you see here.
 
-## Math Processing
+## The Title and the Filename
 
-Any inline math like $a^2 + b^{2} = c^{2}$ will be rendered correctly, as well as math blocks: ^10d1e3
+This note is called `My Main Post.md` and its frontmatter says `date: 2026-01-13`. It was published as `2026-01-13-my-main-post.md`, because Jekyll demands that shape.
+
+The note opened with `# Main Title`. That became the page title above, and the heading itself was deleted — otherwise the title would appear twice, once from the layout and once from the body. You keep writing `h1` the way Obsidian expects; the duplicate never reaches the page.
+
+## Math
+
+Inline math written as `$a^2 + b^{2} = c^{2}$` renders as $a^2 + b^{2} = c^{2}$. ^10d1e3
+
+Display blocks survive as-is:
 
 $$
 \mathbb{E}\left[ \bar{X} \right] = \mathbb{E}\left[ \frac{1}{n} \sum_{i=1}^{n} X_{i} \right] = \frac{1}{n} \mathbb{E}\left[ \sum_{i=1}^{n} X_{i} \right] = \frac{1}{n} \sum_{i=1}^{n} \mathbb{E} \left[ X_{1} \right] = \frac{1}{n} n\mu = \mu
@@ -21,7 +29,7 @@ $$
 
 ^0f5bab
 
-This also works with multi-line math block with `\begin{...}` environments:
+So do multi-line environments, where the `\\` line breaks and `&` alignment markers are easy to mangle:
 
 $$
 \begin{align}
@@ -36,61 +44,89 @@ $$
 
 ^2d1a9f
 
-If you have dollar signs \$ (e.g. The apple costs 10\$ and the banana costs 5\$), please escape them with \\ so that they won't get mistaken as math environments.
+### Text That Only Looks Like Math
 
-### Image Links and Wikilinks
+This is where most converters break. A dollar sign is not an invitation.
 
-A Wikilink to [[My Another Post|Another Post, where you can see how shielding works]] will be transformed into a Markdown link, with the link replaced by a Liquid tag `{% raw %}{% link _posts/path/to/post %}{% endraw %}`, which will be taken care of by Jekyll.
+The book costs $5 and the pen costs $10 — two dollar signs in one sentence, and the text between them is untouched. A converter that pairs dollar signs greedily would swallow "and the pen costs" into a math span and render it in italics.
 
-Embedded images such as
+An escaped `\$100` also stays literal: \$100.
+
+The rule is that an opening `$` cannot be followed by a space and a closing `$` cannot be preceded by one, so prose spacing disqualifies accidental pairs before they ever match.
+
+## Images
+
+Obsidian's embed syntax `![[random-image-abc.gif|500]]` carries a width Jekyll knows nothing about:
 
 ![[random-image-abc.gif|500]]
 
-will be rendered to be compatible with Jekyll (also via Liquid tags), along with the specified `width` (if provided). The actual image file will be copied to Jekyll's `assets/images/obsidian` folder (or a folder of your choice).
+The standard Markdown form with alt text, `![A generated placeholder image|260](random-image-abc.gif)`, works too — alt text preserved, width applied:
 
-The `.md` files found in the `_posts` folder might look broken and won't be rendered by most Markdown editors correctly, but they are compatible with Jekyll's requirements.
+![A generated placeholder image|260](random-image-abc.gif)
 
-### Some Links to Sections/Blocks
+In both cases the file itself is copied out of the vault into the site's image folder. Images not referenced by any published note are left behind, so publishing one note doesn't drag your entire vault along with it.
 
-[[#math-processing|This links back to the header "Math Processing"]]
+## Internal Links
 
-[[#^10d1e3|Block link to a paragraph in this post]]
+Obsidian links point at note _names_. Jekyll needs _paths_, and the path depends on a date prefix that didn't exist when you wrote the note.
 
-[[#^0f5bab|Block link to a math block in this post]]
+- `[[My Another Post]]` → [[My Another Post]]
+- `[[My Another Post|with different display text]]` → [[My Another Post|with different display text]]
+- `[[#Math]]` (a heading in this note) → [[#Math|jump to Math]]
+- `[[#^10d1e3]]` (a specific paragraph) → [[#^10d1e3|jump to the inline math paragraph]]
+- `[[#^0f5bab]]` (a specific math block) → [[#^0f5bab|jump to the expectation block]]
+- `[[My Another Post#Code Blocks]]` → [[My Another Post#Code Blocks|a heading in another note]]
+- `[[My Another Post#^d34e3b]]` → [[My Another Post#^d34e3b|a paragraph in another note]]
 
-### Links to Other Posts
+### Links That Should Not Exist
 
-[[My Another Post|Link to another post on shielding]]
-
-[[My Another Post#Code Block Shielding|Link to a h3 section of that post.]]
-
-[[My Another Post#^d34e3b|Block link to a paragraph in another post]]
-
-### Invalid links
-
-[[A Fake Posts|A link to a post]] that doesn't exist or isn't published will be transformed to plain text. If you look at the original md file, there was a link attached to "A link to a post".
+[[A Fake Posts|This sentence was a link]] in the source — to a note that was never published. Rather than emit a link that 404s, the tool strips it to plain text and warns you at build time. Nothing silently rots.
 
 ## Callouts
 
+Obsidian callouts are not Markdown. They are converted to styled HTML with the matching icon. The button under the panel below re-renders just that section on a dark background, so you can check the callout colors both ways.
+
+<div class="theme-preview" markdown="1">
+
 > [!INFO]
-> If a callout does not have a title, the callout type will be the title.
+> An untitled callout uses its type as the title.
 
 > [!Warning] A Warning Callout with Title
-> Optionally, a callout can have a title.
+> Any text after the type becomes the title.
 
 > [!quote] A Quote Callout
 
 > [!Error] An Error Callout
-> Just like the callout above, a callout can have no messages.
-
-> [!hint] A Hint Callout
-> Just to show you it supports every callout.
+> A callout can also have a title and no body.
 
 > [!example]- A Foldable Example Callout
-> Just like how you use it in Obsidian, a callout type followed be a +/- sign will make the callout foldable.
+> A `-` after the type makes it foldable, collapsed by default. Click the title to open it.
 
-> [!success]+ A Foldable Success Callout But Default Open
-> Callout type followed by a + will make the callout open by default.
+> [!success]+ A Foldable Callout, Open by Default
+> A `+` makes it foldable but open on arrival.
 
-> [!random] A Random Callout Type
-> A non-standard callout type or a callout type not yet supported will be in this default style. You can add your style in the `obsidian-callouts.html`, and add icons inside `callout-styles.py`
+> [!note] Callouts Are Not Dead Ends
+> Everything else still works inside them: inline math $e^{i\pi} + 1 = 0$, a link to [[My Another Post|another post]], `inline code`, and **bold text**. The conversion is not a special case that opts out of the rest of the pipeline.
+
+> [!random] An Unrecognised Callout Type
+> Unknown types fall back to this neutral style instead of failing. Add your own in `obsidian-callouts.html` and `callout_styles.py`.
+
+</div>
+
+## Quiet Conversions
+
+Three things on this page changed without announcing themselves.
+
+Obsidian's `==highlight==` syntax has no Markdown equivalent, so it becomes a `<mark>` element: ==this text is highlighted==.
+
+Obsidian comments written as `%%...%%` are private notes to yourself. %%This sentence is a comment and never reaches the page.%% There was one between this sentence and the last, and you cannot see it.
+
+And this table had no blank line before it in the source, which kramdown requires — so one was inserted:
+
+| Wrote in Obsidian   | Got on the site |
+| :------------------ | :-------------- |
+| `==mark==`          | `<mark>`        |
+| `%%note%%`          | nothing         |
+| an image embed with a width | sized `<img>` |
+
+Continue to [[My Another Post|the second post]], which is entirely about text that must _not_ be converted.

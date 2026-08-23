@@ -5,6 +5,17 @@ baseurl: "/intaglio-demo"
 url: "kckhchen.com"
 permalink: /:title/
 github_username: kckhchen
+tool_repo: "https://github.com/kckhchen/intaglio"
+tool_repo_label: "Intaglio on GitHub"
 
 markdown: kramdown
 theme: minima
+
+exclude:
+  - Example-Vault
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .ruby-lsp
+  - .sass-cache
+  - vendor
